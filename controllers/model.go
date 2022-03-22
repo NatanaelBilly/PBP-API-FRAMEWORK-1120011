@@ -1,35 +1,35 @@
 package controllers
 
 type User struct {
-	Id       int    `json:"id"`
-	Name     string `json:"name"`
-	Age      int    `json:"age"`
-	Address  string `json:"address"`
-	Username string `json:"username"`
-	Password string `json:"password"`
+	Id       int    `form:"id" json:"id"`
+	Name     string `form:"name" json:"name"`
+	Age      int    `form:"age" json:"age"`
+	Address  string `form:"address" json:"address"`
+	Username string `form:"username" json:"username"`
+	Password string `form:"password" json:"password"`
 }
 
 type Login struct {
-	Username string `json:"username"`
-	Password string `json:"password"`
+	Username string `form:"username" json:"username"`
+	Password string `form:"password" json:"password"`
 }
 
 type Register struct {
-	Name      string `json:"name"`
-	Age       int    `json:"age"`
-	Address   string `json:"address"`
-	Username  string `json:"username"`
-	Password1 string `json:"password1"`
-	Password2 string `json:"password2"`
+	Name      string `form:"name" json:"name"`
+	Age       int    `form:"age" json:"age"`
+	Address   string `form:"address" json:"address"`
+	Username  string `form:"username" json:"username"`
+	Password1 string `form:"password1" json:"password1"`
+	Password2 string `form:"password2" json:"password2"`
 }
 
 type Update struct {
-	Name     string `json:"name"`
-	Age      int    `json:"age"`
-	Address  string `json:"address"`
-	Username string `json:"username"`
+	Name     string `form:"name" json:"name"`
+	Age      int    `form:"age" json:"age"`
+	Address  string `form:"address" json:"address"`
+	Username string `form:"username" json:"username"`
 }
 
 type Delete struct {
-	Id int `json:"id"`
+	Id int `form:"id" json:"id"`
 }

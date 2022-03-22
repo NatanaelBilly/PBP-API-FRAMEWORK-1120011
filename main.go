@@ -56,7 +56,7 @@ func main() {
 		var cek bool
 		cek = controller.UpdateUser(user)
 		if cek {
-			r.HTML(http.StatusOK, "updatesuccess", nil)
+			r.HTML(http.StatusOK, "updateSuccess", nil)
 			r.HTML(http.StatusOK, "user_info", temp)
 		}
 	})
@@ -65,7 +65,7 @@ func main() {
 		var cek bool
 		cek = controller.DeleteUser(delete.Id)
 		if cek {
-			r.HTML(http.StatusOK, "deletesuccess", nil)
+			r.HTML(http.StatusOK, "deleteSuccess", nil)
 			r.HTML(http.StatusOK, "index", nil)
 		}
 	})
@@ -78,4 +78,6 @@ func main() {
 		user = controller.GetUsersByName(name)
 		r.HTML(http.StatusOK, "user_info", user)
 	})
+
+	m.Run()
 }

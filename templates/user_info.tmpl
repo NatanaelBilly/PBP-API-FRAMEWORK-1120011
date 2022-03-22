@@ -14,12 +14,12 @@
     <label for="address">Address</label><br />
     <input type="text" name="address" id="address" value="{{ .Address}}"><br /><br />
 
-    <input type="submit" value="Edit">
+    <input type="submit" value="Update">
 </form>
 <br />
 <form action="/delete" method="post">
     <label for="id">Id</label><br />
     <input type="text" name="id" id="id" value="{{ .Id}}" readonly>
 
-    <input type="submit" value="Delete Account">
+    <input type="submit" value="Delete">
 </form>
