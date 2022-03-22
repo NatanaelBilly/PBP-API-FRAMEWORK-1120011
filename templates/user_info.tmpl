@@ -1,0 +1,25 @@
+<h1>Hello {{ .Name }}</h1>
+<h1>This is your Profile</h1>
+
+<form action="/edit" method="post">
+    <label for="name">Name</label><br />
+    <input type="text" name="name" id="name" value="{{ .Name}}"><br />
+    
+    <label for="username">Username</label><br />
+    <input type="text" name="username" id="username" value="{{ .Username}}"><br />
+
+    <label for="age">Age</label><br />
+    <input type="text" name="age" id="age" value="{{ .Age}}"><br />
+
+    <label for="address">Address</label><br />
+    <input type="text" name="address" id="address" value="{{ .Address}}"><br /><br />
+
+    <input type="submit" value="Edit">
+</form>
+<br />
+<form action="/delete" method="post">
+    <label for="id">Id</label><br />
+    <input type="text" name="id" id="id" value="{{ .Id}}" readonly>
+
+    <input type="submit" value="Delete Account">
+</form>
